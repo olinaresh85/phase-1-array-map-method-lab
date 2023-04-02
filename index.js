@@ -12,13 +12,12 @@ const tutorials = [
 ];
 
 
-function capitalizeFirstLetter(ArrayOfSentence) {
-  return ArrayOfSentence
-    .split(' ')
+const CapLetter = ArrayOfSentence => {
+    return ArrayOfSentence.split(' ')
     .map(FirstWordAtArrayOfSentence => FirstWordAtArrayOfSentence.charAt(0).toUpperCase() + FirstWordAtArrayOfSentence.slice(1))
     .join(' ');
 }
 
 const titleCased = () => {
-  return tutorials.map(capitalizeFirstLetter);
+  return tutorials.map(CapLetter);
 };
